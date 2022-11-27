@@ -4,6 +4,7 @@ import one.digitalinnovation.ListaEncadeada.ListaEncadeada;
 
 public class Main {
     public static void main(String[] args) {
+                             /* TESTE PARA A ListaEncadeada */
         ListaEncadeada<String> ListaEncadeada = new ListaEncadeada<>();
 
         ListaEncadeada.add("teste1");

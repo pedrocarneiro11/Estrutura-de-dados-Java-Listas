@@ -1,5 +1,7 @@
 package one.digitalinnovation.ListaDuplamenteEncadeada;
 
+import one.digitalinnovation.ListaEncadeada.No;
+
 public class ListaDuplamenteEncadeada<T> {
 
     private NoDuplo<T> primeiroNo;
@@ -83,5 +85,18 @@ public class ListaDuplamenteEncadeada<T> {
 
     public int size() {
         return this.tamanhoLista;
+    }
+
+    @Override
+    public String toString() {
+        String strRetorno = "";
+        NoDuplo<T> noAuxiliar = primeiroNo;
+
+        for(int i = 0; i < this.size(); i++) {
+            strRetorno += "[No{conteudo=" + noAuxiliar.getConteudo()+ "}]--->";
+            noAuxiliar = noAuxiliar.getNoProximo();
+        }
+        strRetorno += "null";
+        return strRetorno;
     }
 }

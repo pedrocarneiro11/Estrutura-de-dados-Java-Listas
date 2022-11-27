@@ -5,7 +5,7 @@ import one.digitalinnovation.ListaEncadeada.ListaEncadeada;
 
 public class Main {
     public static void main(String[] args) {
-        // caso queira testar cada classe, remova os simbolos de comentado no codigo abaixo :
+        // Caso queira testar cada classe, remova os simbolos de comentado no codigo abaixo :
                              /* TESTE PARA A ListaEncadeada */
         /*
         ListaEncadeada<String> ListaEncadeada = new ListaEncadeada<>();

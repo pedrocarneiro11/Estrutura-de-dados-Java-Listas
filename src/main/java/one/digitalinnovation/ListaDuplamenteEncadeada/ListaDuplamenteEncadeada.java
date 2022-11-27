@@ -32,6 +32,28 @@ public class ListaDuplamenteEncadeada<T> {
         tamanhoLista++;
     }
 
+    public void add(int index , T elemento) {
+        NoDuplo<T> noAuxiliar = getNo(index);
+        NoDuplo<T> novoNo = new NoDuplo<>(elemento);
+        novoNo.setNoProximo(noAuxiliar); // o proximo no ao novo no e o noAuxiliar
+
+        if(novoNo.getNoProximo() != null) { // se houver um no apos o noduplo
+            novoNo.setNoPrevio(noAuxiliar.getNoPrevio()); // o no previo do proximo no sera o previo do auxiliar
+            novoNo.getNoProximo().setNoPrevio(novoNo); // o proximo sera o previo do novoNo
+        } else {
+            novoNo.setNoPrevio(ultimoNo);
+            ultimoNo = novoNo;
+        }
+
+        if(index == 0) { // se o index do novoNo for zero, ele sera o primeiro no
+            primeiroNo = novoNo;
+        } else {
+            novoNo.getNoPrevio().setNoProximo(novoNo);
+        }
+
+        tamanhoLista++;
+    }
+
     private NoDuplo<T> getNo(int index) {
         NoDuplo<T> noAuxiliar = primeiroNo;
 

@@ -1,13 +1,14 @@
 package org.example;
 
+import one.digitalinnovation.ListaCircular.ListaCircular;
 import one.digitalinnovation.ListaDuplamenteEncadeada.ListaDuplamenteEncadeada;
 import one.digitalinnovation.ListaEncadeada.ListaEncadeada;
 
 public class Main {
     public static void main(String[] args) {
-        // Caso queira testar cada classe, remova os simbolos de comentado no codigo abaixo :
+        // Caso queira testar cada classe, remova os simbolos de comentado nos codigos abaixo :
         /* <------------------------------------         ------------------------------------> */
-                             /* TESTE PARA A ListaEncadeada */
+                                       /* TESTE PARA A ListaEncadeada */
 
         /*
         ListaEncadeada<String> ListaEncadeada = new ListaEncadeada<>();
@@ -31,8 +32,9 @@ public class Main {
         System.out.println(ListaEncadeada);
         */
         /* <------------------------------------         ------------------------------------> */
-                           /* TESTE PARA A ListaDuplamenteEncadeada */
+                                  /* TESTE PARA A ListaDuplamenteEncadeada */
 
+        /*
         ListaDuplamenteEncadeada<String> minhaListaEncadeada = new ListaDuplamenteEncadeada<>();
 
         minhaListaEncadeada.add("c1");
@@ -55,6 +57,41 @@ public class Main {
         System.out.println(" ");
         System.out.println("Imprimindo o elemento de indice 3: ");
         System.out.println(minhaListaEncadeada.get(3));
+        */
+        /* <------------------------------------         ------------------------------------> */
+                                     /* TESTE PARA A ListaCircular */
 
+        /*
+        ListaCircular<String> minhaListaCircular = new ListaCircular<>();
+
+        minhaListaCircular.add("c0");
+        System.out.println(minhaListaCircular);
+        System.out.println(" ");
+
+        minhaListaCircular.remove(0);
+        System.out.println(minhaListaCircular);
+        System.out.println(" ");
+
+        minhaListaCircular.add("c1");
+        System.out.println(minhaListaCircular);
+        System.out.println(" ");
+
+        minhaListaCircular.add("c2");
+        minhaListaCircular.add("c3");
+        System.out.println(minhaListaCircular);
+        System.out.println(" ");
+
+        System.out.println(minhaListaCircular.get(0));
+        System.out.println(minhaListaCircular.get(1));
+        System.out.println(minhaListaCircular.get(2));
+        System.out.println(minhaListaCircular.get(3));
+
+        System.out.println(" ");
+        System.out.println("Impressao em loop");
+        for(int i = 0; i < 20; i++) {
+            System.out.println(minhaListaCircular.get(i));
+        }
+
+        */
     }
 }

@@ -6,6 +6,25 @@ public class ListaCircular<T> {
     private No<T> cauda;
     private int tamanhoLista;
 
+    public void remove(int index) {
+        if(index >= this.tamanhoLista) {
+            throw new IndexOutOfBoundsException("O indice é maior que o tamanho da lista");
+        }
+        No<T> noAuxiliar = this.cauda;
+        if(index == 0) {
+            this.cauda = this.cauda.getNoProximo();
+            this.cabeca.setNoProximo(this.cauda);
+        } else if (index == 1) {
+            this.cauda.setNoProximo(this.cauda.getNoProximo().getNoProximo());
+        } else {
+            for(int i = 0; i < index-1; i++) {
+                noAuxiliar = noAuxiliar.getNoProximo(); // percorre a lista ate chegar no no anterior ao que sera removido, que sera o noAuxiliar
+            }
+            noAuxiliar.setNoProximo(noAuxiliar.getNoProximo().getNoProximo()); // seta o no proximo do noAuxiliar como o proximo do proximo
+        }
+        this.tamanhoLista--;
+    }
+
     public T get(int index) {
         return this.getNo(index).getConteudo();
     }

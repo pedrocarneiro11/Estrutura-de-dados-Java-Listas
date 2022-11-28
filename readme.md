@@ -4,6 +4,7 @@
 <br>
 
 Dentro do repositorio, ha exemplos de listas encadeadas, listas duplamente encadeadas e listas circulares
+
 <br>
 
 Dentro de cada classe de lista, foram criados os metodos isEmpty, size, getNo, get, remove, add e toString

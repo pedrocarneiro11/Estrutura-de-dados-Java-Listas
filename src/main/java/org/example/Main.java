@@ -6,7 +6,9 @@ import one.digitalinnovation.ListaEncadeada.ListaEncadeada;
 public class Main {
     public static void main(String[] args) {
         // Caso queira testar cada classe, remova os simbolos de comentado no codigo abaixo :
+        /* <------------------------------------         ------------------------------------> */
                              /* TESTE PARA A ListaEncadeada */
+
         /*
         ListaEncadeada<String> ListaEncadeada = new ListaEncadeada<>();
 
@@ -28,7 +30,7 @@ public class Main {
 
         System.out.println(ListaEncadeada);
         */
-
+        /* <------------------------------------         ------------------------------------> */
                            /* TESTE PARA A ListaDuplamenteEncadeada */
 
         ListaDuplamenteEncadeada<String> minhaListaEncadeada = new ListaDuplamenteEncadeada<>();
